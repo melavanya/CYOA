@@ -1,3 +1,4 @@
+
 class Comment {
   constructor(dataAccessObject) {
     this.dataAccessObject = dataAccessObject;
@@ -14,7 +15,7 @@ class Comment {
   }
 
   deleteComments() {
-    const sql = 'DELETE FROM comments; DROP TABLE [IF EXISTS] comments;';
+    const sql = 'DELETE FROM comments';
     return this.dataAccessObject.run(sql);
   }
 
